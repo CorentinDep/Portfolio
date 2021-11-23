@@ -1,0 +1,564 @@
+/* Font familly Monterrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Color */
+    --bg_page : rgb(42, 50, 55);
+    --primary_color : #fff;
+    --secondary_color : #838383;
+    --three_color : #a78539;
+
+    /* Font Familly */
+    --montserrat : 'Montserrat', sans-serif;
+}
+
+
+body {
+    background-color: var(--bg_page);
+    font-family: var(--montserrat);
+    overflow-x: hidden;
+
+}
+
+
+/* haut de page */
+.haut-page {
+    position: relative;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
+    overflow: hidden;
+}   
+
+
+.haut-page > img {
+    position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	z-index: -12;
+	object-fit: cover;
+}
+
+.haut-page .row {
+    height: 100%;
+}
+
+.haut-page h1 {
+    color: #fff;
+    font-size: 50px;
+}
+
+.container-gauche {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 100%;
+}
+
+/* Espace à gauche du texte au niveau du haut de page */
+.container-gauche div {
+    margin-left: 100px;
+    transition: all .5s ease;
+}
+
+.container-gauche p {
+    color: var(--three_color);
+    margin-bottom: 50px;
+}
+
+
+.btn_contact {
+    width: 200px;
+    border: 1px solid var(--three_color);
+    text-align: center;
+    padding: 20px 50px;
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+
+.btn_contact img {
+    transition: all .2s ease;
+}
+
+.btn_contact:hover {
+    background-color: var(--three_color);
+    color: #fff;
+}
+
+
+
+.btn_contact:hover .arrow {
+    animation: transaltion .5s;
+}
+
+@keyframes transaltion {
+    0% {
+        transform: translateX(0px);
+    } 
+    50% {
+        transform: translateX(10px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(2px);
+    }
+}
+
+/* FLECHE */
+.fleche {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-left: 50px;
+}
+
+.fleche::before {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    border-radius: 2px;
+    right: 0;
+    width: 1px;
+    height: 10px;
+    background-color: #fff;
+    transform: rotate(-45deg);
+    transition: all .5s ease-in-out;
+}
+
+.tiret {
+    position: relative;
+}
+
+.tiret::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    background-color: #fff;
+    width: 20px;
+    height: 1px;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.btn_contact:hover .tiret::before {
+    opacity: 1;
+    left: 3px;
+}
+
+.btn_contact:hover .fleche::before {
+    transform: translateX(20px) rotate(-50deg);
+}
+
+.btn_contact:hover .fleche::after {
+    transform: translateX(20px) rotate(50deg);
+}
+
+
+.fleche::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    border-radius: 2px;
+    right: 0;
+    width: 1px;
+    height: 10px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    transition: all .5s ease-in-out;
+
+}
+
+
+/* Contenu de la page */
+.content {
+    margin-top: 20px;
+}
+
+/* =====   Moi    ===== */
+.moi .img {
+    text-align: center;
+    margin: 100px 0;
+    border-right: 1px solid #fff;
+
+}
+
+.moi .txt {
+    color: #fff;
+    margin-top: 170px;
+    padding-left: 80px;
+}
+
+.moi .txt p {
+    width: 500px;
+}
+.img .cadre {
+    overflow: hidden;
+}
+.moi img {
+    width: 300px;
+    text-align: center;
+    transition: transform .5s ease-in-out;
+}
+
+.moi img:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+
+/* Mes compétences */
+.slide, .card, .front, .back {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* Face de l'objet */
+.front {
+    background-color : var(--primary_color);
+    color: var(--color_font);
+    text-align: center;
+    box-shadow: 5px 5px 24px -4px var(--color_font);
+}
+
+.front > i {
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.front > p {
+    font-size: 20px;
+    margin-top: 20px;
+
+}
+
+/* Arrière de l'objet */
+.carte {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 50px;
+}
+
+.back {
+    background-color: var(--primary_color);
+}
+
+.back > p {
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #000;
+}
+
+
+.slide {
+    perspective: 1000px;
+}
+
+.slide:hover .card, .slide.hover {
+    transform: rotateY(-180deg);
+}
+
+.card {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(-180deg);
+}
+
+.card img {
+    margin-top: 50px;
+}
+
+/* Partie historique */
+#historique {
+    position: relative;
+    margin-top: 200px;
+
+}
+
+#competence {
+    margin-top: 50px;
+}
+
+/* Bouton pour télécharger les projets */
+.btn_telecharger {
+    color: var(--three_color);
+    position: relative;
+    width: 300px;
+    padding: 15px 25px;
+    border: 1px solid var(--three_color);
+    transition: color .2s linear;
+    text-decoration: none;
+}
+
+.btn_telecharger::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--three_color);
+    transition: width .2s linear;
+    z-index: -1;
+}
+
+.btn_telecharger:hover::before {
+    width: 100%;
+}
+
+.btn_telecharger:hover {
+    color: #fff;
+}
+
+.titrePart {
+    margin: 0 0 200px 50px;
+    color: #fff;
+}
+
+.content-text-droite h1, .content-text-gauche h1 {
+    color: var(--three_color);
+}
+
+/* Contenu de l'historique part 1 */
+.content-text-droite {
+    position: relative;
+    border-left: 1px solid var(--primary_color);
+    padding: 20px;
+    padding-left: 50px;
+}
+
+.content-text-droite p, .content-text-droite h2 {
+    color: var(--primary_color);
+}
+
+.content-text-droite p, .content-text-gauche p {
+    margin-bottom: 50px;
+}
+
+.content-text-droite::before {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    left: -6px;
+    top: 50%;
+    border-radius: 50%;
+    background-color: var(--primary_color);
+}
+
+.content-date-gauche h2 {
+    color: var(--primary_color);
+    text-align: right;
+    padding-right: 50px;
+    position: relative;
+    top: 45%;
+}
+
+/* Contenu de l'historique part 2 */
+.content-text-gauche {
+    padding: 20px;
+    position: relative;
+    height: 200px;
+}
+
+.aze {
+    position: absolute;
+    width: 500px;
+    right: 0;
+}
+
+.content-text-gauche p, .content-text-gauche h2 {
+    color: var(--primary_color);
+}
+
+.content-date-droite {
+    border-left: 1px solid var(--primary_color);
+    position: relative;
+}
+
+.content-date-droite h2 {
+    position: relative;
+    color: var(--primary_color);
+    top: 45%;
+    margin-left: 50px;
+}
+
+.content-date-droite::before {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    left: -6px;
+    top: 50%;
+    border-radius: 50%;
+    background-color: var(--primary_color);
+}
+
+
+@media screen and (max-width : 450px) {
+    .carte {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carte .slide {
+        margin: 20px 0 20px 0;
+
+    }
+}
+
+/* ------------------ ECRAN MOYEN -------------------------- */
+@media screen and (max-width : 1050px) {
+
+    /* ======= Changement pour la partie haut de page ======= */
+    /* On change l'espace a gauche du titre au niveau de l'image */
+    .container-gauche div {
+        margin-left: 20px;
+    }
+
+    /*On change les tailles de police du texte en haut de page */
+    .container-gauche h1 {
+        font-size: 30px;
+    }
+
+    .container-gauche p {
+        font-size: 15px;
+    }
+
+    /* ======= Changement pour la partie mes compétences ======= */
+    .carte {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 100px;
+    }
+    /* ======= Changement pour la partie historique ======= */
+
+    /* Onn change les tailles de polices */
+    .content-text-gauche h1, .content-text-droite h1 {
+        font-size: 20px;
+    }
+
+    .content-text-gauche h2, .content-text-droite h2 {
+        font-size: 15px;
+    }
+
+    .content-text-gauche p, .content-text-droite p {
+        font-size: 10px;
+    }
+
+    .aze {
+        width: 300px;
+    }
+}
+
+/* ------------------ ECRAN TRES PETIT -------------------------- */
+@media screen and (max-width : 600px) {
+
+    /* ======= Changement générale ============== */
+    .titrePart {
+        font-size: 20px;
+    }
+
+    /* ======= Changement pour la partie haut de page ======= */
+
+    /* On change l'espace a gauche du titre au niveau de l'image */
+    .container-gauche div {
+        margin-left: 10px;
+    }
+
+    /*On change les tailles de police du texte en haut de page */
+    .container-gauche h1 {
+        font-size: 20px;
+    }
+
+    .container-gauche p {
+        font-size: 10px;
+    }
+
+    /* ======= Changement pour la partie mes compétences ======= */
+    .carte {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 100px;
+        margin-left: 20%;
+    }
+    /* ======= Changement pour la partie historique ======= */
+}
+
+
+
+
+/* ------------------ ECRAN MOYEN -------------------------- */
+@media screen and (max-width : 751px) {
+
+    /* ======= Changement pour la partie haut de page ======= */
+    /* On change l'espace a gauche du titre au niveau de l'image */
+    
+
+    /* ======= Changement pour la partie mes compétences ======= */
+    
+    /* ======= Changement pour la partie historique ======= */
+    .aze {
+        left: 50px;
+    }
+
+    .content-date-droite {
+        border: none;
+    }
+
+    .content-date-droite::before {
+        width: 0;
+    }
+    
+    .content-text-gauche {
+        border-left: 1px solid var(--primary_color);
+    }
+    .content-text-gauche::before {
+        content: '';
+        position: absolute;
+        width: 11px;
+        height: 11px;
+        left: -6px;
+        top: 50%;
+        border-radius: 50%;
+        background-color: var(--primary_color);
+    }
+
+    .btn_telecharger {
+        width: 100px;
+        font-size: 10px;
+        padding: 10px 20px;
+    }
+    
+}
+
+
+
+/* Contact : Formulaire */
+#contact {
+    margin-top: 200px;
+    text-align: center;
+    color: #ffff;
+}
+
+#contact a {
+    color: var(--three_color);
+}
