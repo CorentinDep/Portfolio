@@ -38,4 +38,19 @@ ScrollReveal().reveal('.apparition', {
 ScrollReveal().reveal('.titrePart', {
     origin: 'right',
     distance: '200px'
+});
+
+
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+    cursor.setAttribute('style', 'top:'+(e.pageY - 20)+"px; left:"+(e.pageX - 20)+"px;")
+})
+
+document.addEventListener('click', e => {
+    cursor.classList.add('cursorClick');
+    /* On met un delay pour enlever l'animation */
+    setTimeout(()=>{
+        cursor.classList.remove("cursorClick");
+    }, 500);
 })

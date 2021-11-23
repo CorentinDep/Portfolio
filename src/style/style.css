@@ -17,7 +17,6 @@ body {
     background-color: var(--bg_page);
     font-family: var(--montserrat);
     overflow-x: hidden;
-
 }
 
 
@@ -561,4 +560,29 @@ body {
 
 #contact a {
     color: var(--three_color);
+}
+
+/* ==== CURSEUR ===== */
+.cursor {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+}
+
+.cursorClick {
+    animation: cursorClick .5s;
+    transition: all ease .5s;
+}
+
+@keyframes cursorClick {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
 }
