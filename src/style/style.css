@@ -19,8 +19,31 @@ body {
     overflow-x: hidden;
 }
 
+/* === PARTIE COMMUNE === */
 
-/* haut de page */
+/* DIV avec les titres des parties */
+.contentTitre {
+    margin: 100px 0 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+.contentTitre::before {
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 2px;
+    background-color: var(--three_color);
+    bottom: -30px;
+    left: calc(50% - 50px);
+}
+
+.titrePart {
+    color: #fff;
+    margin: 10px 0;
+}
+
+/* ===== haut de page ===== */
 .haut-page {
     position: relative;
     height: 100vh;
@@ -85,26 +108,6 @@ body {
     color: #fff;
 }
 
-
-
-.btn_contact:hover .arrow {
-    animation: transaltion .5s;
-}
-
-@keyframes transaltion {
-    0% {
-        transform: translateX(0px);
-    } 
-    50% {
-        transform: translateX(10px);
-    }
-    75% {
-        transform: translateX(-5px);
-    }
-    100% {
-        transform: translateX(2px);
-    }
-}
 
 /* FLECHE */
 .fleche {
@@ -180,14 +183,13 @@ body {
 /* =====   Moi    ===== */
 .moi .img {
     text-align: center;
-    margin: 100px 0;
     border-right: 1px solid #fff;
 
 }
 
 .moi .txt {
     color: #fff;
-    margin-top: 170px;
+    margin-top: 70px;
     padding-left: 80px;
 }
 
@@ -197,18 +199,60 @@ body {
 .img .cadre {
     overflow: hidden;
 }
-.moi img {
+.moi .imageProfil {
     width: 300px;
     text-align: center;
     transition: transform .5s ease-in-out;
 }
 
-.moi img:hover {
+.moi .imageProfil:hover {
     transform: scale(1.05) rotate(5deg);
 }
 
 
 /* Mes compétences */
+
+/* LANGUAGES LOGICIELS */
+.content_progessBar {
+    text-align: center;
+    color: #fff;
+}
+
+
+.ensemble_progressbar .progressBar {
+    display: inline-block;
+    width: 500px;
+    height: 20px;
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid #ffff;
+    margin: 0 20px;
+    overflow: hidden;
+}
+
+.progressBar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    animation: all 5s linear;
+}   
+
+
+
+.animatePrgressBar::before {
+    width: 50%;
+}
+
+/* AUTRES COMPETENCE */
+.content_card {
+    display: flex;
+    justify-content: space-around;
+}
 .slide, .card, .front, .back {
     width: 200px;
     height: 200px;
@@ -235,11 +279,7 @@ body {
 }
 
 /* Arrière de l'objet */
-.carte {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin-left: 50px;
-}
+
 
 .back {
     background-color: var(--primary_color);
@@ -329,10 +369,7 @@ body {
     color: #fff;
 }
 
-.titrePart {
-    margin: 0 0 200px 50px;
-    color: #fff;
-}
+
 
 .content-text-droite h1, .content-text-gauche h1 {
     color: var(--three_color);
@@ -509,7 +546,19 @@ body {
 @media screen and (max-width : 751px) {
 
     /* ======= Changement pour la partie haut de page ======= */
-    /* On change l'espace a gauche du titre au niveau de l'image */
+    /* On change la flex direction des cartes */
+    .content_card {
+        flex-direction: column;
+    }
+
+    .content_card > div {
+        margin: 20px 0;
+    }
+
+    .content_card .slide {
+        position: relative;
+        left: calc(50% - 100px);
+    }
     
 
     /* ======= Changement pour la partie mes compétences ======= */

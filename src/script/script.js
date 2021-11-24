@@ -28,15 +28,23 @@ ScrollReveal().reveal('.revealDroit', {
 });
 
 
-ScrollReveal().reveal('.apparition', {
-    origin: 'left',
-    distance: '200px',
+ScrollReveal().reveal('.apparitionTop', {
+    origin: 'bottom',
+    distance: '50px',
     opacity: '0',
-    interval: 200
+    duration: '2000'
 });
 
-ScrollReveal().reveal('.titrePart', {
-    origin: 'right',
+ScrollReveal().reveal('.apparitionBot', {
+    origin: 'top',
+    distance: '50px',
+    opacity: '0',
+    duration: '2000'
+
+});
+
+ScrollReveal().reveal('.contentTitre', {
+    origin: 'bottom',
     distance: '200px'
 });
 

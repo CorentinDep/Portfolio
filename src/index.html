@@ -16,7 +16,8 @@
         <img src="./image/fond.jpg" alt="image fond" id="imageFond">
         <div class="container-gauche">
             <div>
-                <h1 class="apparition">Bonjour et bienvenue, </br>Je suis Corentin DEPRECQ,</h1>
+                <h1 class="apparitionTop">Bonjour et bienvenue, </h1>
+                <h1 class="apparitionBot">Je suis Corentin DEPRECQ,</h1>
                 <p class="apparition">Je suis actuellement en 2ème année du DUT informatique de Rodez...</p>
                 <a href="#contact" class="apparition btn_contact">
                     Me contacter 
@@ -33,12 +34,15 @@
     <div class="content">
 
         <div class="moi container-fluid">
+            <div class="contentTitre">
+                <img src="./icon/user.svg" alt="User Icon">
+                <h1 class="titrePart">A propos de moi</h1>
+            </div>
             <div class="row">
                 <div class="col-md-6 img">
-                        <img src="./image/image_profil.jpg" alt="image de profil">
+                        <img src="./image/image_profil.jpg" alt="image de profil" class="imageProfil">
                 </div>
                 <div class="col-md-6 txt">
-                    <h1>A propos de moi...</h1>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum doloribus ut quasi hic odit pariatur dolores minima provident aperiam voluptatum id sit nihil delectus magnam eveniet temporibus repellendus, dolore modi tempore vel. Quae quis quos maxime accusamus animi. Quo odio deserunt totam debitis nihil dolores necessitatibus nostrum, illo ex incidunt.</p>
                 </div>
             </div>
@@ -46,78 +50,83 @@
         
         <!-- Mes compétences -->
         <div id="competence">
-            <h1 class="titrePart">Mes compétences</h1>
-            <div class="carte">
-                <!-- Languages de programmation -->
-                <div class="slide">
-                    <div class="card">
-                        <div class="front">
-                            <img src="./icon/code.svg" alt="code">
-                            <p>Languages</p>
+            <div class="contentTitre">
+                <img src="./icon/briefcase.svg" alt="Wallet Icon">
+                <h1 class="titrePart">Mes compétences</h1>
+            </div>
+
+            <!-- Contenu avec avec des bars de prgressions animées pour les languages de programmations -->
+            <div class="content_progessBar">
+                <div class="ensemble_progressbar">
+                    <span>HTML</span>
+                    <span class="progressBar"></span>
+                    <span>80%</span>
+                </div>
+            </div>
+
+            <!-- Contenu avec les cartes montrants les logiciels, les langues et les intérêts -->
+            <div class="content_card">
+                <div>
+                    <!-- Les logiciels -->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="front">
+                                <img src="./icon/monitor.svg" alt="code">
+                                <p>Logiciels</p>
+                            </div>
+
+                            <div class="back">
+                                <p>Intellij, Visual Studio Code, GitHub, Notion, Modelio, Figma, WinDesign, Pack Office, PowerPoint, Word, Excel</p>
+
+                            </div>
+
                         </div>
-
-                        <div class="back">
-                            <p>Java, Html, Css, PHP, C, SQL, Bash</p>
-
-                        </div>
-
                     </div>
                 </div>
+                <div>
+                    <!-- Les langues -->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="front">
+                                <img src="./icon/message-circle.svg" alt="message icon">
+                                <p>Langues</p>
+                            </div>
 
-                <!-- Les logiciels -->
-                <div class="slide">
-                    <div class="card">
-                        <div class="front">
-                            <img src="./icon/monitor.svg" alt="code">
-                            <p>Logiciels</p>
+                            <div class="back">
+                                <p></br>Anglais &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;B2</br>Espagnol &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;A2</p>
+
+                            </div>
+
                         </div>
-
-                        <div class="back">
-                            <p>Intellij, Visual Studio Code, GitHub, Notion, Modelio, Figma, WinDesign, Pack Office, PowerPoint, Word, Excel</p>
-
-                        </div>
-
                     </div>
                 </div>
+                <div>
+                    <!-- Mes intérets -->
+                    <div class="slide">
+                        <div class="card">
+                            <div class="front">
+                                <img src="./icon/smile.svg" alt="message icon">
+                                <p>Intérêts</p>
+                            </div>
 
-                <!-- Les langues -->
-                <div class="slide">
-                    <div class="card">
-                        <div class="front">
-                            <img src="./icon/message-circle.svg" alt="message icon">
-                            <p>Langues</p>
-                        </div>
+                            <div class="back">
+                                <p>Développement informatique, Jeux vidéo, Survie, Randonnée, Cinéma</p>
 
-                        <div class="back">
-                            <p></br>Anglais &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;B2</br>Espagnol &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;A2</p>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Mes intérets -->
-                <div class="slide">
-                    <div class="card">
-                        <div class="front">
-                            <img src="./icon/smile.svg" alt="message icon">
-                            <p>Intérêts</p>
-                        </div>
-
-                        <div class="back">
-                            <p>Développement informatique, Jeux vidéo, Survie, Randonnée, Cinéma</p>
+                            </div>
 
                         </div>
-
                     </div>
                 </div>
             </div>
+            
         </div>
 
         <!-- Mon historique -->
         <div id="historique" class="container-fluid">
-            <h1 class="titrePart">Mon historique</h1>
-
+            <div class="contentTitre">
+                <img src="./icon/clock.svg" alt="Wallet Icon">
+                <h1 class="titrePart">Mon historique</h1>
+            </div>
             <!-- 2020/21 : ANNÉE EN COURS  -->
             <div class="row reveal">
                 <div class="col-md-6 content-text-gauche">
@@ -236,6 +245,10 @@
         
         <!-- Me contacter -->
         <div id="contact" class="container">
+            <div class="contentTitre">
+                <img src="./icon/mail.svg" alt="Wallet Icon">
+                <h1 class="titrePart">Me contacter</h1>
+            </div>
             <div class="row">
                 <div class="col-xs-12">
                     <p>Il est possible de me contacter par email à l'adresse suivante <a href="mailto:corentin.deprecq@protonmail.com">corentin.deprecq@prontonmail.fr</a></p>
