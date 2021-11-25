@@ -667,15 +667,17 @@ body {
 .cursor {
     width: 40px;
     height: 40px;
-    border: 1px solid #fff;
     border-radius: 50%;
     position: absolute;
     pointer-events: none;
+    border: 1px solid transparent;
+
 }
 
 .cursorClick {
     animation: cursorClick .5s;
     transition: all ease .5s;
+    border-color: #fff;
 }
 
 @keyframes cursorClick {
@@ -685,5 +687,95 @@ body {
     100% {
         transform: scale(1.5);
         opacity: 0;
+    }
+}
+
+
+/*  Animation titre */
+.nom path:nth-child(1) {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: animate_line 2s ease forwards;
+}
+.nom path:nth-child(2) {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: animate_line 2s ease forwards .3s;
+}
+.nom path:nth-child(3) {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: animate_line 2s ease forwards .6s;
+}
+.nom path:nth-child(4) {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: animate_line 2s ease forwards .9s;
+}
+.nom path:nth-child(5) {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: animate_line 2s ease forwards 1.2s;
+}
+.nom path:nth-child(6) {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: animate_line 2s ease forwards 1.5s;
+}
+.nom path:nth-child(7) {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: animate_line 2s ease forwards 1.8s;
+}
+.nom path:nth-child(8) {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: animate_line 2s ease forwards 2.1s;
+}
+.nom path:nth-child(9) {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: animate_line 2s ease forwards 2.4s;
+}
+.nom path:nth-child(10) {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: animate_line 2s ease forwards 2.7s;
+}
+.nom path:nth-child(11) {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: animate_line 2s ease forwards 3s;
+}
+.nom path:nth-child(12) {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: animate_line 2s ease forwards 3.3s;
+}
+.nom path:nth-child(13) {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: animate_line 2s ease forwards 3.6s;
+}
+.nom path:nth-child(14) {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: animate_line 2s ease forwards 3.9s;
+
+}
+.nom path:nth-child(15) {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: animate_line 2s ease forwards 4.2s;
+}
+.nom path:nth-child(16) {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: animate_line 2s ease forwards 4.5s;
+}
+
+@keyframes animate_line {
+    to {
+        stroke-dashoffset: 0;
     }
 }
