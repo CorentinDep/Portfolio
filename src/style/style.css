@@ -212,19 +212,22 @@ body {
 
 /* Mes compétences */
 
+
 /* LANGUAGES LOGICIELS */
 .content_progessBar {
     text-align: center;
     color: #fff;
 }
 
+.ensemble_progressbar {
+    display: flex;
+    justify-content: center;
+}
 
-.ensemble_progressbar .progressBar {
-    display: inline-block;
+.progressBar {
     width: 500px;
     height: 20px;
     position: relative;
-    border-radius: 20px;
     border: 1px solid #ffff;
     margin: 0 20px;
     overflow: hidden;
@@ -238,9 +241,30 @@ body {
     width: 0;
     height: 100%;
     background-color: #fff;
-    border-radius: 20px;
     animation: all 5s linear;
 }   
+
+/* Pourcentage de remplissment des bars de progressions */
+
+.html::before {
+    width: 90%;
+}
+
+.css::before {
+    width: 90%;
+}
+
+.java::before {
+    width: 80%;
+}
+
+.sql::before {
+    width: 60%;
+}
+
+.c::before {
+    width: 70%;
+}
 
 
 
