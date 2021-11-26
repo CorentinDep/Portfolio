@@ -46,3 +46,5 @@ document.addEventListener('click', e => {
         cursor.classList.remove("cursorClick");
     }, 500);
 })
+
+/* ==== ANIMATION DES POURCENTAGES DES COMPETENCES EN LANGUAGES DE PROGRAMMATIONS ==== */

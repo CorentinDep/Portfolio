@@ -230,20 +230,24 @@ body {
 .content_progessBar {
     text-align: center;
     color: #fff;
+    margin-bottom: 100px;
 }
 
 .ensemble_progressbar {
     display: flex;
     justify-content: center;
+    margin: 20px 0;
 }
 
 .progressBar {
-    width: 500px;
+    width: 40%;
     height: 20px;
     position: relative;
     border: 1px solid #ffff;
     margin: 0 20px;
     overflow: hidden;
+    border-radius: 10px;
+    animation: all .5s ease;
 }
 
 .progressBar::before {
@@ -254,10 +258,86 @@ body {
     width: 0;
     height: 100%;
     background-color: #fff;
+    border-radius: 10px;
+    animation: all .5s linear;
+}   
+
+.progressBar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #a78539;
     animation: all 5s linear;
+    border-radius: 10px;
+    transition: width .5s linear;
 }   
 
 /* Pourcentage de remplissment des bars de progressions */
+#competence:hover .progressBar {
+    border-color: var(--three_color);
+}
+
+#competence:hover .html::after {
+    animation: animate_progressBar_html 2s ease forwards;
+    /* width: 90%; */
+}
+
+#competence:hover .css::after {
+    animation: animate_progressBar_css 2s .5s forwards;
+    /* width: 90%; */
+}
+
+#competence:hover .java::after {
+    animation: animate_progressBar_java 2s 1s forwards;
+    
+    /* width: 80%; */
+}
+
+#competence:hover .sql::after {
+    animation: animate_progressBar_sql 2s 1.5s forwards;
+    /* width: 60%; */
+}
+
+#competence:hover .c::after {
+    animation: animate_progressBar_c 2s 2s forwards;
+    /* width: 70%; */
+}
+
+@keyframes animate_progressBar_html {
+    from {
+        width: 0;
+    }
+    to {
+        width: 90%;
+    }
+}
+
+@keyframes animate_progressBar_css {
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes animate_progressBar_java {
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes animate_progressBar_sql {
+    to {
+        width: 60%;
+    }
+}
+
+@keyframes animate_progressBar_c {
+    to {
+        width: 70%;
+    }
+}
 
 .html::before {
     width: 90%;
@@ -703,13 +783,18 @@ body {
     transition: all .5s ease;
 }
 
+.list_contact > div {
+    margin: 20px 0;
+}
 .list_contact a:hover {
     text-decoration: underline;
     color: #000;
 }
 
 
-.list_contact a img {
+.list_contact img {
+    position: relative;
+    display: inline-block;
     margin-right: 10px;
 }
 
@@ -723,10 +808,10 @@ body {
 }
 
 .contact_content_right a {
-    padding: 20px 15px;
+    padding: 20px 12px;
     margin: 0 20px;
     border: 1px solid #505050;
-    border-radius: 3px;
+    border-radius: 7px;
     transition: all .5s ease;
 }
 
@@ -739,6 +824,41 @@ body {
 
 .contact_content_right a:hover img {
     transform: scale(1.1) rotate(5deg);
+}
+
+.menu_nav {
+    margin: 20px 0 50px 0;
+}
+.menu_nav a {
+    color: var(--three_color);
+    text-decoration: none;
+    font-size: 25px;
+    margin: 0 20px;
+    padding: 10px;
+    position: relative;
+}
+
+.menu_nav a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #a784392f;
+    width: 0;
+    height: 0;
+    border-radius: 5px;
+    transition: all .5s ease;
+}
+
+.menu_nav a:hover::before {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.copyright {
+    color: rgba(66, 66, 66, 0.418);
 }
 
 /* ==== CURSEUR ===== */

@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- Haut de page -->
-    <div class="haut-page">
+    <div class="haut-page" id="hautPage">
         <img src="./image/fond.jpg" alt="image fond" id="imageFond">
         <div class="container-gauche">
             <div>
@@ -72,7 +72,7 @@
     <!-- Contenu de la page -->
     <div class="content">
 
-        <div class="moi container-fluid">
+        <div class="moi container-fluid" id="aPropos">
             <div class="contentTitre">
                 <img src="./icon/user.svg" alt="User Icon" class="iconEntete">
                 <h1 class="titrePart">A propos de moi</h1>
@@ -100,31 +100,31 @@
                 <div class="ensemble_progressbar">
                     <div>HTML</div>
                     <div class="progressBar html"></div>
-                    <div>90%</div>
+                    <div class="number html_number">90%</div>
                 </div>
                 <!-- CSS -->
                 <div class="ensemble_progressbar">
                     <div>CSS</div>
                     <div class="progressBar css"></div>
-                    <div>90%</div>
+                    <div class="number css_number">90%</div>
                 </div>
                 <!-- Java -->
                 <div class="ensemble_progressbar">
                     <div>Java</div>
                     <div class="progressBar java"></div>
-                    <div>80%</div>
+                    <div class="number java_number">80%</div>
                 </div>
                 <!-- SQL -->
                 <div class="ensemble_progressbar">
                     <div>SQL</div>
                     <div class="progressBar sql"></div>
-                    <div>60%</div>
+                    <div class="number sql_number">60%</div>
                 </div>
                 <!-- C -->
                 <div class="ensemble_progressbar">
                     <div>C</div>
                     <div class="progressBar c"></div>
-                    <div>70%</div>
+                    <div class="number sql_number">70%</div>
                 </div>
             </div>
 
@@ -278,9 +278,11 @@
                         <a href="./Projet/Projet_Vente_Materiel.zip" class="btn_telecharger">Télécharger le projet
                             <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M33 28.5C33 29.2956 32.6839 30.0587 32.1213 30.6213C31.5587 31.1839 30.7956 31.5 30 31.5H6C5.20435 31.5 4.44129 31.1839 3.87868 30.6213C3.31607 30.0587 3 29.2956 3 28.5V7.5C3 6.70435 3.31607 5.94129 3.87868 5.37868C4.44129 4.81607 5.20435 4.5 6 4.5H13.5L16.5 9H30C30.7956 9 31.5587 9.31607 32.1213 9.87868C32.6839 10.4413 33 11.2044 33 12V28.5Z" stroke="black" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M10.2 24.048C10.064 24.048 9.944 24 9.84 23.904C9.744 23.8 9.696 23.676 9.696 23.532C9.696 23.388 9.744 23.268 9.84 23.172C9.944 23.076 10.064 23.028 10.2 23.028C10.336 23.028 10.452 23.076 10.548 23.172C10.652 23.268 10.704 23.388 10.704 23.532C10.704 23.676 10.652 23.8 10.548 23.904C10.452 24 10.336 24.048 10.2 24.048ZM16.9103 23.484V24H11.9303V23.592L16.0583 18.252H11.9903V17.736H16.8383V18.144L12.6983 23.484H16.9103ZM18.7095 17.736H19.3095V24H18.7095V17.736ZM19.0095 16.212C18.8735 16.212 18.7575 16.168 18.6615 16.08C18.5655 15.984 18.5175 15.868 18.5175 15.732C18.5175 15.596 18.5655 15.48 18.6615 15.384C18.7575 15.288 18.8735 15.24 19.0095 15.24C19.1455 15.24 19.2615 15.288 19.3575 15.384C19.4535 15.472 19.5015 15.584 19.5015 15.72C19.5015 15.856 19.4535 15.972 19.3575 16.068C19.2615 16.164 19.1455 16.212 19.0095 16.212ZM24.9824 17.688C25.5664 17.688 26.0944 17.824 26.5664 18.096C27.0384 18.368 27.4064 18.744 27.6704 19.224C27.9424 19.704 28.0784 20.252 28.0784 20.868C28.0784 21.484 27.9424 22.036 27.6704 22.524C27.4064 23.004 27.0384 23.38 26.5664 23.652C26.0944 23.916 25.5664 24.048 24.9824 24.048C24.4304 24.048 23.9304 23.92 23.4824 23.664C23.0344 23.4 22.6864 23.036 22.4384 22.572V26.328H21.8384V17.736H22.4144V19.212C22.6624 18.732 23.0104 18.36 23.4584 18.096C23.9144 17.824 24.4224 17.688 24.9824 17.688ZM24.9464 23.508C25.4264 23.508 25.8584 23.396 26.2424 23.172C26.6264 22.948 26.9264 22.636 27.1424 22.236C27.3664 21.836 27.4784 21.38 27.4784 20.868C27.4784 20.356 27.3664 19.9 27.1424 19.5C26.9264 19.1 26.6264 18.788 26.2424 18.564C25.8584 18.34 25.4264 18.228 24.9464 18.228C24.4664 18.228 24.0344 18.34 23.6504 18.564C23.2744 18.788 22.9744 19.1 22.7504 19.5C22.5344 19.9 22.4264 20.356 22.4264 20.868C22.4264 21.38 22.5344 21.836 22.7504 22.236C22.9744 22.636 23.2744 22.948 23.6504 23.172C24.0344 23.396 24.4664 23.508 24.9464 23.508Z" fill="black"/>
+                                <path d="M10.092 24.036C10.012 24.036 9.94003 24.004 9.87603 23.94C9.81203 23.876 9.78003 23.804 9.78003 23.724C9.78003 23.636 9.81203 23.564 9.87603 23.508C9.94003 23.444 10.012 23.412 10.092 23.412C10.18 23.412 10.252 23.444 10.308 23.508C10.372 23.564 10.404 23.636 10.404 23.724C10.404 23.804 10.372 23.876 10.308 23.94C10.252 24.004 10.18 24.036 10.092 24.036Z" fill="black"/>
+                                <path d="M16.4957 23.772V24H11.7317V23.82L16.0997 18.024H11.7917V17.796H16.4357V17.976L12.0677 23.772H16.4957Z" fill="black"/>
+                                <path d="M18.4542 17.796H18.6942V24H18.4542V17.796ZM18.5742 16.08C18.4862 16.08 18.4102 16.048 18.3462 15.984C18.2902 15.92 18.2622 15.848 18.2622 15.768C18.2622 15.68 18.2902 15.608 18.3462 15.552C18.4102 15.488 18.4862 15.456 18.5742 15.456C18.6542 15.456 18.7262 15.488 18.7902 15.552C18.8542 15.608 18.8862 15.68 18.8862 15.768C18.8862 15.848 18.8542 15.92 18.7902 15.984C18.7262 16.048 18.6542 16.08 18.5742 16.08Z" fill="black"/>
+                                <path d="M24.4662 17.76C25.0262 17.76 25.5342 17.896 25.9902 18.168C26.4542 18.432 26.8182 18.804 27.0822 19.284C27.3462 19.764 27.4782 20.304 27.4782 20.904C27.4782 21.504 27.3462 22.044 27.0822 22.524C26.8182 22.996 26.4542 23.368 25.9902 23.64C25.5342 23.904 25.0262 24.036 24.4662 24.036C23.8262 24.036 23.2542 23.864 22.7502 23.52C22.2542 23.168 21.9022 22.7 21.6942 22.116V26.328H21.4542V17.796H21.6942V19.692C21.9022 19.1 22.2542 18.632 22.7502 18.288C23.2462 17.936 23.8182 17.76 24.4662 17.76ZM24.4662 23.808C24.9862 23.808 25.4582 23.688 25.8822 23.448C26.3062 23.2 26.6382 22.856 26.8782 22.416C27.1182 21.968 27.2382 21.464 27.2382 20.904C27.2382 20.344 27.1182 19.844 26.8782 19.404C26.6382 18.956 26.3062 18.608 25.8822 18.36C25.4582 18.112 24.9862 17.988 24.4662 17.988C23.9462 17.988 23.4742 18.112 23.0502 18.36C22.6262 18.608 22.2942 18.956 22.0542 19.404C21.8142 19.844 21.6942 20.344 21.6942 20.904C21.6942 21.464 21.8142 21.968 22.0542 22.416C22.2942 22.856 22.6262 23.2 23.0502 23.448C23.4742 23.688 23.9462 23.808 24.4662 23.808Z" fill="black"/>
                                 </svg>
-                                
                         </a>
                     </div>
                 </div>
@@ -337,11 +339,22 @@
                         <p>Passionné et curieux je suis à votre entière disposition pour répondre à tout type de question sur mon parcours, mes projets, mes compétences...</p>
                         <p>Merci de me contacter aux coordonnées suivante :</p>
                         <div class="list_contact">
-                            <a href="https://www.google.com/maps/place/10+All.+4+Ao%C3%BBt+1789,+31850+Montrab%C3%A9/data=!4m2!3m1!1s0x12ae986c10951cb3:0x27555df862584fb5?sa=X&ved=2ahUKEwiy-rm1xrX0AhVGSfEDHYh9CVoQ8gF6BAgSEAE"><img src="./icon/home.svg" alt="icon home">10 allée du 4 Août 1789</a></br>
-                            <a href="https://www.google.com/maps/place/10+All.+4+Ao%C3%BBt+1789,+31850+Montrab%C3%A9/data=!4m2!3m1!1s0x12ae986c10951cb3:0x27555df862584fb5?sa=X&ved=2ahUKEwiy-rm1xrX0AhVGSfEDHYh9CVoQ8gF6BAgSEAE"><img src="./icon/map-pin.svg" alt="icon map">31850, Montrabé</a></br>
-                            <a href="#"><img src="./icon/phone.svg" alt="icon phone">06 26 22 77 60</a></br>
-                            <a href="mailto:corentin.deprecq@protonmail.com"><img src="./icon/at-sign.svg" alt="icon at">corentin.deprecq@prontonmail.fr</a></br>
-                            <a href="https://portfolio-corentin-deprecq.netlify.app/"><img src="./icon/bookmark.svg" alt="icon site">Mon site</a>
+                            <div>
+                                <a href="https://www.google.com/maps/place/10+All.+4+Ao%C3%BBt+1789,+31850+Montrab%C3%A9/data=!4m2!3m1!1s0x12ae986c10951cb3:0x27555df862584fb5?sa=X&ved=2ahUKEwiy-rm1xrX0AhVGSfEDHYh9CVoQ8gF6BAgSEAE"><img src="./icon/home.svg" alt="icon home">10 allée du 4 Août 1789</a>
+                            </div>
+                            <div>
+                                <a href="https://www.google.com/maps/place/10+All.+4+Ao%C3%BBt+1789,+31850+Montrab%C3%A9/data=!4m2!3m1!1s0x12ae986c10951cb3:0x27555df862584fb5?sa=X&ved=2ahUKEwiy-rm1xrX0AhVGSfEDHYh9CVoQ8gF6BAgSEAE"><img src="./icon/map-pin.svg" alt="icon map">31850, Montrabé</a>
+                            </div>
+                            <div>
+                                <a href="#"><img src="./icon/phone.svg" alt="icon phone">06 26 22 77 60</a>
+                            </div>
+                            <div>
+                                <a href="mailto:corentin.deprecq@protonmail.com"><img src="./icon/at-sign.svg" alt="icon at">corentin.deprecq@prontonmail.fr</a>
+                            </div>
+                            <div>
+                                <a href="https://portfolio-corentin-deprecq.netlify.app/"><img src="./icon/bookmark.svg" alt="icon site">Mon site</a>
+                            </div>
+                            
                         </div>
                         
                     </div>
@@ -371,6 +384,15 @@
                             
                         </div>
                 </div>
+            </div>
+            <div class="menu_nav">
+                <a href="#hautPage">Acceuil</a>
+                <a href="#aPropos">A propos</a>
+                <a href="#competence">Compétences</a>
+                <a href="#historique">Historique</a>
+            </div>
+            <div class="row copyright">
+                <p>Copyright © 2021 - Corentin DEPRECQ   - Tous droits réservés</p>
             </div>
         </div>
 <!-- 
