@@ -1,6 +1,15 @@
 # Portfolio
 
-Création d'un site portfolio avec les languages suivant :
+Création d'un site web statique.
+
+
+## Languages utilisés
+
 - Html
-- Css
-- JavaScript
+- Css (basique + Boostrap)
+- JavaScript (basique + librairies [reveal.js](https://revealjs.com/))
+
+
+## Implémentation futur
+
+- Site complétement responsive

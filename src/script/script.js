@@ -48,3 +48,6 @@ document.addEventListener('click', e => {
 })
 
 /* ==== ANIMATION DES POURCENTAGES DES COMPETENCES EN LANGUAGES DE PROGRAMMATIONS ==== */
+
+
+/* ==== AUTRE ANIMATION ==== */
