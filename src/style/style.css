@@ -1,6 +1,7 @@
 /* Font familly Monterrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+/* Font familly paprika */
+@import url('https://fonts.googleapis.com/css2?family=Paprika&display=swap');
 :root {
     /* Color */
     --bg_page : rgb(42, 50, 55);
@@ -68,8 +69,13 @@ body {
 .haut-page h1 {
     color: #fff;
     font-size: 50px;
+    font-family: 'Paprika', cursive;
 }
 
+.haut-page p {
+    margin-top: 30px;
+    font-family: 'Paprika', cursive;
+}
 .container-gauche {
     display: flex;
     align-items: center;
@@ -181,6 +187,13 @@ body {
 }
 
 /* =====   Moi    ===== */
+.moi:hover .iconEntete {
+    transform: translateY(-10px);
+}
+
+.iconEntete {
+    transition: transform .5s ease;
+}
 .moi .img {
     text-align: center;
     border-right: 1px solid #fff;
@@ -268,9 +281,6 @@ body {
 
 
 
-.animatePrgressBar::before {
-    width: 50%;
-}
 
 /* AUTRES COMPETENCE */
 .content_card {
@@ -358,8 +368,16 @@ body {
 
 }
 
+#historique:hover .iconEntete {
+    transform: translateY(-10px);
+}
+
 #competence {
     margin-top: 50px;
+}
+
+#competence:hover .iconEntete {
+    transform: translateY(-10px);
 }
 
 /* Bouton pour télécharger les projets */
@@ -373,6 +391,18 @@ body {
     text-decoration: none;
 }
 
+.btn_telecharger svg {
+    margin-left: 15px;
+}
+
+.btn_telecharger path {
+    stroke: var(--three_color);
+    transition: stroke .2s linear;
+}
+
+.btn_telecharger:hover path {
+    stroke: #fff;
+}
 .btn_telecharger::before {
     content: '';
     position: absolute;
@@ -628,39 +658,87 @@ body {
 #contact {
     margin-top: 200px;
     text-align: center;
-    color: #ffff;
+    color: #505050;
+    padding-top: 10px;
 }
 
-#contact a {
-    color: var(--three_color);
-    position: relative;
-    padding: 5px 10px;
-    transition: all .1s linear;
-
+#contact:hover .iconEntete {
+    transform: translateY(-10px);
 }
 
-#contact a:hover {
-    color: #fff;
+
+#contact .titrePart {
+    color: #505050;
 }
 
-#contact a::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background-color: var(--three_color);
-    transition: all .1s linear;
-    z-index: -1;
-    border-radius: 5px;
+#contact .contentTitre {
+    margin: 20px 0 100px 0;
 }
 
-#contact a:hover::before {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
+
+/* === Contenu de la partie contact */
+.ensemble_contact_content {
+    background-color: #ffff;
+}
+
+.contact_content_left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_content_left div {
+    width: 80%;
+    text-align: left;
+}
+
+.list_contact {
+    margin-bottom: 50px;
+}
+.list_contact a {
+    padding: 10px;
+    color: #505050;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.list_contact a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+
+.list_contact a img {
+    margin-right: 10px;
+}
+
+.contact_content_right {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-left: 1px solid #505050;
+    margin-bottom: 50px;
+}
+
+.contact_content_right a {
+    padding: 20px 15px;
+    margin: 0 20px;
+    border: 1px solid #505050;
+    border-radius: 3px;
+    transition: all .5s ease;
+}
+
+.contact_content_right img {
+    transition: all .5s ease;
+}
+.contact_content_right a:hover {
+    background-color: #a784392f;
+}
+
+.contact_content_right a:hover img {
+    transform: scale(1.1) rotate(5deg);
 }
 
 /* ==== CURSEUR ===== */
@@ -693,28 +771,28 @@ body {
 
 /*  Animation titre */
 .nom path:nth-child(1) {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
+    stroke-dasharray: 545;
+    stroke-dashoffset: 545;
     animation: animate_line 2s ease forwards;
 }
 .nom path:nth-child(2) {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
+    stroke-dasharray: 623;
+    stroke-dashoffset: 623;
     animation: animate_line 2s ease forwards .3s;
 }
 .nom path:nth-child(3) {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
+    stroke-dasharray: 587;
+    stroke-dashoffset: 587;
     animation: animate_line 2s ease forwards .6s;
 }
 .nom path:nth-child(4) {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
+    stroke-dasharray: 758;
+    stroke-dashoffset: 758;
     animation: animate_line 2s ease forwards .9s;
 }
 .nom path:nth-child(5) {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
+    stroke-dasharray: 584;
+    stroke-dashoffset: 584;
     animation: animate_line 2s ease forwards 1.2s;
 }
 .nom path:nth-child(6) {
@@ -723,54 +801,54 @@ body {
     animation: animate_line 2s ease forwards 1.5s;
 }
 .nom path:nth-child(7) {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
+    stroke-dasharray: 642;
+    stroke-dashoffset: 642;
     animation: animate_line 2s ease forwards 1.8s;
 }
 .nom path:nth-child(8) {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
+    stroke-dasharray: 573;
+    stroke-dashoffset: 573;
     animation: animate_line 2s ease forwards 2.1s;
 }
 .nom path:nth-child(9) {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
+    stroke-dasharray: 712;
+    stroke-dashoffset: 712;
     animation: animate_line 2s ease forwards 2.4s;
 }
 .nom path:nth-child(10) {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
+    stroke-dasharray: 643;
+    stroke-dashoffset: 643;
     animation: animate_line 2s ease forwards 2.7s;
 }
 .nom path:nth-child(11) {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
+    stroke-dasharray: 524;
+    stroke-dashoffset: 524;
     animation: animate_line 2s ease forwards 3s;
 }
 .nom path:nth-child(12) {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
+    stroke-dasharray: 806;
+    stroke-dashoffset: 806;
     animation: animate_line 2s ease forwards 3.3s;
 }
 .nom path:nth-child(13) {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
+    stroke-dasharray: 573;
+    stroke-dashoffset: 573;
     animation: animate_line 2s ease forwards 3.6s;
 }
 .nom path:nth-child(14) {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
+    stroke-dasharray: 692;
+    stroke-dashoffset: 692;
     animation: animate_line 2s ease forwards 3.9s;
 
 }
 .nom path:nth-child(15) {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
+    stroke-dasharray: 772;
+    stroke-dashoffset: 772;
     animation: animate_line 2s ease forwards 4.2s;
 }
 .nom path:nth-child(16) {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
+    stroke-dasharray: 650;
+    stroke-dashoffset: 650;
     animation: animate_line 2s ease forwards 4.5s;
 }
 

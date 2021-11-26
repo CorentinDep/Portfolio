@@ -27,22 +27,6 @@ ScrollReveal().reveal('.revealDroit', {
     distance: '200px'
 });
 
-
-ScrollReveal().reveal('.apparitionTop', {
-    origin: 'bottom',
-    distance: '50px',
-    opacity: '0',
-    duration: '2000'
-});
-
-ScrollReveal().reveal('.apparitionBot', {
-    origin: 'top',
-    distance: '50px',
-    opacity: '0',
-    duration: '2000'
-
-});
-
 ScrollReveal().reveal('.contentTitre', {
     origin: 'bottom',
     distance: '200px'
