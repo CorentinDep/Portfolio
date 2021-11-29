@@ -17,7 +17,17 @@ ScrollReveal().reveal('.img', {
     distance: '400px'
 });
 
+ScrollReveal().reveal('.contact_content_left', {
+    origin: 'left',
+    distance: '400px'
+});
+
 ScrollReveal().reveal('.txt', {
+    origin: 'right',
+    distance: '400px'
+});
+
+ScrollReveal().reveal('.contact_content_right', {
     origin: 'right',
     distance: '400px'
 });
@@ -32,11 +42,24 @@ ScrollReveal().reveal('.contentTitre', {
     distance: '200px'
 });
 
+ScrollReveal().reveal('.menu_nav', {
+    origin: 'bottom',
+    distance: '200px'
+});
+
+ScrollReveal().reveal('.copyright', {
+    origin: 'bottom',
+    distance: '200px'
+});
+
+ScrollReveal().reveal('.imageFond', {
+});
+
 
 const cursor = document.querySelector('.cursor');
 
 document.addEventListener('mousemove', e => {
-    cursor.setAttribute('style', 'top:'+(e.pageY - 20)+"px; left:"+(e.pageX - 20)+"px;")
+    cursor.setAttribute('style', 'top:'+(e.pageY - 20)+"px; left:"+(e.pageX - 20)+"px;");
 })
 
 document.addEventListener('click', e => {
@@ -51,3 +74,4 @@ document.addEventListener('click', e => {
 
 
 /* ==== AUTRE ANIMATION ==== */
+
