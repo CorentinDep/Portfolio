@@ -149,11 +149,16 @@ body {
     margin: 50px 0 0 0;
 }
 .moi .txt p {
-    width: 700px;
+    width: 70%;
 }
-.img .cadre {
-    overflow: hidden;
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+
 .moi .imageProfil {
     width: 300px;
     text-align: center;
@@ -162,6 +167,26 @@ body {
 
 .moi .imageProfil:hover {
     transform: scale(1.05) rotate(5deg);
+}
+
+.separateur {
+    width: 70%;
+    background-color: rgb(180, 180, 180);
+    height: 1px;
+}
+
+.tableMoi {
+    margin-top: 50px;
+    width: 70%;
+    border-collapse: collapse;
+}
+
+.tableMoi .titreTable {
+    font-weight: bold;
+}
+
+.tableMoi .resultTitre {
+    color: #c1baba;
 }
 
 
@@ -249,10 +274,7 @@ body {
 }
 
 @keyframes animate_progressBar_html {
-    from {
-        width: 0;
-    }
-    to {
+    100% {
         width: 90%;
     }
 }
