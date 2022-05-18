@@ -278,10 +278,10 @@ body {
     transition: width .5s linear;
 }   
 
-/* Pourcentage de remplissment des bars de progressions */
-#competence:hover .progressBar {
-    border-color: var(--three_color);
-}
+/*!* Pourcentage de remplissment des bars de progressions *!*/
+/*#competence:hover .progressBar {*/
+/*    border-color: var(--three_color);*/
+/*}*/
 
 #competence:hover .html::after {
     animation: animate_progressBar_html 2s ease forwards;
@@ -306,6 +306,11 @@ body {
 
 #competence:hover .c::after {
     animation: animate_progressBar_c 2s 2s forwards;
+    /* width: 70%; */
+}
+
+#competence:hover .js::after {
+    animation: animate_progressBar_js 2s 2.5s forwards;
     /* width: 70%; */
 }
 
@@ -342,6 +347,12 @@ body {
     }
 }
 
+@keyframes animate_progressBar_js {
+    to {
+        width: 80%;
+    }
+}
+
 .html::before {
     width: 90%;
 }
@@ -360,6 +371,10 @@ body {
 
 .c::before {
     width: 70%;
+}
+
+.js::before {
+    width: 80%;
 }
 
 
